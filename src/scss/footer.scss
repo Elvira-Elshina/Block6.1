@@ -1,0 +1,33 @@
+// @import url(fonts.css);
+
+.text-about{
+    &__offer{
+        margin-top: 10px;
+        font-weight: bold;
+            &::after{
+                display: inline;
+                content: "\203a";
+                color: #FF3E79;
+                transform: rotate(90deg);
+                width: 20px;
+                height: 20px;    
+                margin-left: 5px;
+            }
+    }
+
+}
+
+.footer-1 {
+    color: #7E7E82;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #D9FFF5;
+    margin-top: 40px;
+}
+
+.ftext {
+    margin-top: 16px;
+    text-align: center;
+}
