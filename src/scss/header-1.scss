@@ -1,0 +1,19 @@
+$white-light-blue: #d9fff5;
+$back-gradient: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+$light-gray: #7e7e82;
+
+.header-1 {
+  border-top: 1px $white-light-blue solid;
+  margin-top: 20px;
+  background: $back-gradient;
+  padding: 10px;
+  padding-left: 16px;
+
+  &__h1-repair {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: $light-gray;
+  }
+}

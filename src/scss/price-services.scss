@@ -1,0 +1,107 @@
+$light-gray: #7e7e82;
+$white: white;
+$dark-black-blue: #1b1c21;
+$white-gray: #eaeaea;
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .price-services {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border-radius: 5px;
+      width: 260px;
+      height: 200px;
+      background-color: $white;
+    }
+    &__h-repair-services,
+    &__h-price,
+    &__h-time {
+      padding-left: 16px;
+      color: $light-gray;
+      margin: 0;
+      padding: 0;
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+    &__li-repair-services,
+    &__li-price,
+    &__li-time {
+      color: $dark-black-blue;
+      padding-left: 16px;
+    }
+    &__btn-order {
+      display: block;
+      margin-left: auto;
+      margin-top: -40px;
+      margin-right: 16px;
+    }
+    &__mobile-display-none {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .price-services {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    &__h-repair-services,
+    &__h-price,
+    &__h-time {
+      display: none;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 40% 20% 20% 10%;
+      width: auto;
+      border-bottom: 1px $white-gray solid;
+      margin: 16px;
+
+      &:last-child {
+        border: none;
+      }
+    }
+    &__mobile-display-none {
+      display: grid;
+      grid-template-columns: 40% 20% auto;
+      margin-left: 16px;
+      padding: 16px;
+      color: $light-gray;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .price-services {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    &__h-repair-services,
+    &__h-price,
+    &__h-time {
+      display: none;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: 40% 25% 25% 10%;
+      width: auto;
+      border-bottom: 1px $white-gray solid;
+      margin: 16px;
+
+      &:last-child {
+        border: none;
+      }
+    }
+    &__mobile-display-none {
+      display: grid;
+      grid-template-columns: 40% 25% 25% 10%;
+      padding: 16px;
+      color: $light-gray;
+    }
+  }
+}

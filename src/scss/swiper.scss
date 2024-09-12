@@ -1,0 +1,77 @@
+.swiper {
+  margin-left: 16px;
+  margin-top: 32px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .swiper-pagination {
+    position: static;
+  }
+  :root {
+    --swiper-theme-color: rgb(133, 133, 133);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .swiper {
+    margin-top: 12px;
+  }
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 215px;
+  }
+  .swiper-slide {
+    width: 20%;
+    min-width: 245px;
+    margin-top: 33px;
+    height: auto;
+  }
+
+  .swiper-wrapper.price-services {
+    height: auto;
+    width: auto;
+    margin: 16px;
+  }
+
+  .repair-cards {
+    .swiper-slide {
+      display: flex;
+      width: auto;
+      margin-top: 33px;
+      height: 160px;
+      margin-right: 24px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .repair-cards .swiper-slide {
+    min-width: 224px;
+    margin-top: 33px;
+    height: 160px;
+    margin-right: 24px;
+  }
+
+  .swiper {
+    margin-top: 12px;
+  }
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 215px;
+  }
+  .swiper-slide {
+    width: 20%;
+    min-width: 245px;
+    margin-top: 33px;
+    margin-right: 25px;
+    height: auto;
+  }
+
+  .swiper-wrapper.price-services {
+    height: auto;
+    width: auto;
+    margin: 16px;
+  }
+}

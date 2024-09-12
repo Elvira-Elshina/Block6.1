@@ -1,0 +1,29 @@
+.text-about {
+  &__offer {
+    margin-top: 10px;
+    font-weight: bold;
+
+    &::after {
+      display: inline;
+      content: '›';
+      color: #ff3e79;
+      transform: rotate(90deg);
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .text-about {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .text-about {
+    width: 420px;
+    margin: 16px;
+  }
+}

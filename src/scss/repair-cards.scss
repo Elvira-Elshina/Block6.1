@@ -1,0 +1,41 @@
+.repair-cards__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  width: 240px;
+  height: 160px;
+  background-color: #ffffff;
+}
+
+.repair-cards__link {
+  display: block;
+}
+
+.repair-cards__image-go {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-top: 80px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+  .repair-cards .swiper-slide {
+    min-width: 224px;
+    margin-top: 33px;
+    height: 160px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .repair-cards .swiper-slide {
+    min-width: 224px;
+    margin-top: 33px;
+    height: 160px;
+    margin-right: 24px;
+  }
+}

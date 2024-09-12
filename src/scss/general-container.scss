@@ -1,0 +1,57 @@
+@import url('../fonts.css');
+
+$backgr-color: #f8f8f8;
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'TTLakes normal';
+  padding: 0;
+  margin: 0;
+  background-color: $backgr-color;
+}
+
+.general-container {
+  animation: appearance 0.5s;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .general-container {
+    animation: appearance 0.5s;
+  }
+
+  .hidden-general {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+  .general-container {
+    animation: appearance 0.5s;
+  }
+
+  .hidden-general {
+    z-index: 0;
+    position: relative;
+  }
+}
+
+@media (min-width: 1120px) {
+  body {
+    margin: 0;
+    display: flex;
+  }
+}

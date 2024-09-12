@@ -1,0 +1,264 @@
+$white: white;
+$shadow-dark-blue: #0e185033;
+$mint: #41f6d7;
+$dark-black-blue: #1b1c21;
+$white-transparent: #ffffff6c;
+
+a {
+  text-decoration: none;
+}
+
+.big-container-menu {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  background-color: $white;
+}
+
+.menu {
+  padding-top: 20px;
+  padding-left: 24px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-menu {
+  border: none;
+  background: none;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header-menu {
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+
+  &__button-close {
+    background-image: url(../img/close.png);
+    background-size: cover;
+    margin-left: 4px;
+  }
+  &__button-search {
+    margin-left: 75px;
+    background-image: url(../img/search.png);
+    background-size: cover;
+    margin-right: 16px;
+  }
+}
+
+.nav-menu__item {
+  font-family: 'TTlakes medium';
+
+  display: flex;
+  height: 25px;
+  margin-bottom: 32px;
+  padding: 0;
+
+  &_link--active::before,
+  &:hover::before {
+    display: flex;
+    content: ' ';
+    background-color: $mint;
+
+    width: 4px;
+    height: 32px;
+    margin-right: 20px;
+    margin-left: -24px;
+    margin-top: -5px;
+
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  &_link--active {
+    opacity: 0.5;
+  }
+}
+
+.nav-menu {
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__links {
+    color: $dark-black-blue;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.footer-menu {
+  color: $dark-black-blue;
+  margin-top: 100px;
+  margin-bottom: 32px;
+
+  &__button-call {
+    background-image: url(../img/call.svg);
+    background-size: cover;
+  }
+  &__button-chat {
+    background-image: url(../img/chat.svg);
+    background-size: cover;
+    margin-left: 10px;
+  }
+  &__button-profile {
+    background-image: url(../img/profile.svg);
+    background-size: cover;
+    margin-left: 10px;
+  }
+  &__mail {
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+  &__mail-link {
+    font-size: 16px;
+    color: $dark-black-blue;
+  }
+  &__tel-link {
+    color: $dark-black-blue;
+    font-size: 24px;
+    font-family: 'TTLakes bold';
+  }
+  &__langs {
+    margin-top: 40px;
+  }
+  &__lang {
+    font-size: 16px;
+    color: $dark-black-blue;
+    margin-right: 7px;
+  }
+  &__lang:hover,
+  &__langs_link--active {
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .big-container-menu {
+    display: none;
+  }
+
+  .empty {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+
+    &__mini-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 167px;
+    }
+  }
+
+  @keyframes appearance {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  .menu-visible-mobile {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    animation: appearance 0.5s;
+  }
+
+  .hidden-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .big-container-menu {
+    display: none;
+  }
+
+  .empty {
+    width: 100%;
+    height: 250vh;
+    background-color: $white-transparent;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .menu {
+    z-index: 2;
+    width: 320px;
+    box-shadow: 16px 0px 52px 0px $shadow-dark-blue;
+    background-color: $white;
+    height: 810px;
+  }
+
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+
+    &__mini-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 167px;
+    }
+  }
+
+  @keyframes appearance {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  .menu-visible-mobile {
+    position: absolute;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 250vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 50;
+    animation: appearance 0.5s;
+    display: flex;
+  }
+}
+
+@media (min-width: 1120px) {
+  .empty {
+    display: none;
+  }
+
+  .menu {
+    width: 270px;
+  }
+
+  .header-menu {
+    justify-content: space-between;
+
+    &__button-close {
+      display: none;
+    }
+    &__button-search {
+      margin-right: 20px;
+    }
+  }
+}
