@@ -38,8 +38,14 @@ $mint: #41f6d7;
   top: 24px;
   left: -44px;
   content: '››';
-  color: #41f6d7;
+  color: $mint;
   transform: rotate(270deg);
+}
+
+.all-card__apple {
+  background-image: url(../img/apple.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
