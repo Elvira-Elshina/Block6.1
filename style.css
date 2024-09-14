@@ -62,6 +62,11 @@
   color: #41f6d7;
   transform: rotate(270deg); }
 
+.all-card__apple {
+  background-image: url(./static/apple.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 @media (min-width: 320px) and (max-width: 767px) {
   .button__show-all {
     display: none; } }
