@@ -3,6 +3,18 @@ $white: white;
 $dark-black-blue: #1b1c21;
 $white-gray: #eaeaea;
 
+.price-services {
+  &__btn-order {
+    border-radius: 20px;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+      transition-property: opacity;
+      transition-duration: 0.2s;
+    }
+  }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .price-services {
     &__container {

@@ -1,3 +1,5 @@
+$mint: #41f6d7;
+
 .main {
   &__section-services {
     display: flex;
@@ -16,7 +18,23 @@
 
     &:hover {
       cursor: pointer;
+      opacity: 0.5;
+      cursor: pointer;
+      transition-property: opacity;
+      transition-duration: 0.2s;
     }
+
+    &::before {
+      display: block;
+      margin: 6px;
+      content: '››';
+      color: $mint;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__text-span-lorem {
+    display: none;
   }
 }
 

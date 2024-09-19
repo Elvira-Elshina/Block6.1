@@ -18,6 +18,10 @@ $backgr-color: #f8f8f8;
   box-sizing: border-box;
 }
 
+.body_scroll--none {
+  overflow-y: hidden;
+}
+
 body {
   font-family: 'TTLakes normal';
   padding: 0;
@@ -27,6 +31,9 @@ body {
 
 .general-container {
   animation: appearance 0.5s;
+  position: relative;
+  z-index: 1;
+  background-color: $backgr-color;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

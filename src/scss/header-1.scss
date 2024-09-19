@@ -6,7 +6,7 @@ $light-gray: #7e7e82;
   border-top: 1px $white-light-blue solid;
   margin-top: 20px;
   background: $back-gradient;
-  padding: 10px;
+  padding: 24px;
   padding-left: 16px;
 
   &__h1-repair {
@@ -15,5 +15,14 @@ $light-gray: #7e7e82;
     line-height: 24px;
     text-align: left;
     color: $light-gray;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .header-1 {
+    &_full--text {
+      margin-top: 240px;
+    }
   }
 }

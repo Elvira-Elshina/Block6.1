@@ -13,12 +13,14 @@ a {
   padding: 0;
   width: 320px;
   background-color: $white;
+  position: relative;
+  z-index: 51;
 }
 
 .menu {
   padding-top: 20px;
   padding-left: 24px;
-  height: inherit;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,6 +34,9 @@ a {
 
   &:hover {
     cursor: pointer;
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 0.3s;
   }
 }
 
@@ -98,7 +103,7 @@ a {
 
 .footer-menu {
   color: $dark-black-blue;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 32px;
 
   &__button-call {
@@ -115,21 +120,31 @@ a {
     background-size: cover;
     margin-left: 10px;
   }
-  &__mail {
-    margin-top: 16px;
-    margin-bottom: 12px;
-  }
+
   &__mail-link {
     font-size: 16px;
     color: $dark-black-blue;
+
+    &:hover {
+      opacity: 0.5;
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
   }
   &__tel-link {
     color: $dark-black-blue;
     font-size: 24px;
     font-family: 'TTLakes bold';
+    &:hover {
+      opacity: 0.5;
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
   }
   &__langs {
     margin-top: 40px;
+    display: flex;
+    padding: 0;
   }
   &__lang {
     font-size: 16px;
@@ -140,6 +155,18 @@ a {
   &__langs_link--active {
     opacity: 0.5;
   }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-style: normal;
+    height: 96px;
+  }
+}
+
+li {
+  list-style: none;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -147,7 +174,7 @@ a {
     display: none;
   }
 
-  .empty {
+  .overlay {
     display: none;
   }
 
@@ -191,7 +218,7 @@ a {
     display: none;
   }
 
-  .empty {
+  .overlay {
     width: 100%;
     height: 250vh;
     background-color: $white-transparent;
@@ -204,7 +231,7 @@ a {
     width: 320px;
     box-shadow: 16px 0px 52px 0px $shadow-dark-blue;
     background-color: $white;
-    height: 810px;
+    height: 100vh;
   }
 
   .header-menu {
@@ -243,7 +270,7 @@ a {
 }
 
 @media (min-width: 1120px) {
-  .empty {
+  .overlay {
     display: none;
   }
 

@@ -1,3 +1,5 @@
+$light-gray: #7e7e82;
+
 .repair-cards__container {
   display: flex;
   justify-content: space-between;
@@ -7,6 +9,13 @@
   width: 240px;
   height: 160px;
   background-color: #ffffff;
+
+  &:hover {
+    box-shadow: 0 0 3px 3px $light-gray;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
 }
 
 .repair-cards__link {

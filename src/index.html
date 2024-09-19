@@ -9,77 +9,10 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
-  <body>
-    <div class="big-container-call">
-      <div class="empty-call"></div>
-      <div class="call">
-        <button class="call__close-modal"></button>
-        <h1 class="call__h1"> Заказать звонок </h1>
-        <form class="call__form" action="#" method="get">
-          <input
-            class="input-f call__input-tel"
-            type="text"
-            placeholder="Телефон"
-          />
-          <label class="call__info">
-            Нажимая “отправить”, вы даете согласие на
-            <a class="call__personal-data" href="#"
-              >обработку персональных данных</a
-            >
-            и соглашаетесь с нашей
-            <a class="call__privacy-policy">политикой конфиденциальности</a>
-          </label>
-          <div class="call__div"
-            ><button class="call__button-send" type="submit"></button
-          ></div>
-        </form>
-      </div>
-    </div>
-
-    <div class="big-container-feedback">
-      <div class="empty-feedback"></div>
-      <div class="feedback">
-        <button class="feedback__close-modal"></button>
-        <h1 class="feedback__h1"> Обратная связь </h1>
-        <form class="feedback__form" action="#" method="get">
-          <input
-            class="input-f feedback__input-name"
-            type="text"
-            placeholder="Имя"
-          />
-          <input
-            class="input-f feedback__input-tel"
-            type="text"
-            placeholder="Телефон"
-          />
-          <input
-            class="input-f feedback__input-email"
-            type="text"
-            placeholder="Электронная почта"
-          />
-          <textarea
-            class="input-f feedback__input-message"
-            type="text"
-            placeholder="Сообщение"
-          ></textarea>
-          <label class="feedback__info">
-            Нажимая “отправить”, вы даете согласие на
-            <a class="feedback__personal-data" href="#"
-              >обработку персональных данных</a
-            >
-            и соглашаетесь с нашей
-            <a class="feedback__privacy-policy">политикой конфиденциальности</a>
-          </label>
-          <div class="feedback__div"
-            ><button class="feedback__button-send" type="submit"></button
-          ></div>
-        </form>
-      </div>
-    </div>
-
-    <div class="big-container-menu">
-      <div class="empty"></div>
-      <main class="menu">
+  <body class="body">
+    <section class="big-container-menu">
+      <div class="overlay"></div>
+      <div class="menu">
         <div class="header-menu">
           <div class="header-menu__mini-container">
             <button class="button-menu header-menu__button-close"></button>
@@ -143,28 +76,37 @@
           <button class="button-menu footer-menu__button-chat"></button>
           <button class="button-menu footer-menu__button-profile"></button>
 
-          <div class="footer-menu__mail">
+          <address class="footer-menu__contacts">
             <a class="footer-menu__mail-link" href="mailto:mail@cps.com"
               >mail@cps.com</a
             >
-          </div>
-          <div class="footer-menu__tel">
+
             <a class="footer-menu__tel-link" href="tel:8 800 890 8900"
               >8 800 890 8900</a
             >
-          </div>
-          <div class="footer-menu__langs">
-            <a
-              class="footer-menu__lang footer-menu__lang-ru footer-menu__langs_link--active"
-              href="#"
-              >RU</a
+          </address>
+          <ul class="footer-menu__langs">
+            <li
+              ><a
+                class="footer-menu__lang footer-menu__lang-ru footer-menu__langs_link--active"
+                href="#"
+                >RU</a
+              ></li
             >
-            <a class="footer-menu__lang footer-menu__land-en" href="#">EN</a>
-            <a class="footer-menu__lang footer-menu__lang-ch" href="#">CH</a>
-          </div>
+            <li
+              ><a class="footer-menu__lang footer-menu__land-en" href="#"
+                >EN</a
+              ></li
+            >
+            <li
+              ><a class="footer-menu__lang footer-menu__lang-ch" href="#"
+                >CH</a
+              ></li
+            >
+          </ul>
         </footer>
-      </main>
-    </div>
+      </div>
+    </section>
 
     <div class="general-container">
       <div class="big-container-1">
@@ -198,7 +140,7 @@
             </div>
           </nav>
         </header>
-        <main class="main">
+        <div class="main">
           <div class="main__container-nav">
             <p class="main__img-divider"></p>
             <button class="button main__button-repair">
@@ -219,7 +161,7 @@
             </button>
           </div>
           <h1 class="main__h1-services">Услуги и сервисы</h1>
-          <main class="main__section-services">
+          <div class="main__section-services">
             <a class="links main__devices links_link--active" href="#"
               >Ремонтируемые устройства</a
             >
@@ -230,7 +172,7 @@
             <a class="links main__adress" href="#">Адреса сервисных центров</a>
             <a class="links main__special-price" href="#">Специальные цены</a>
             <a class="links main__rewiews" href="#">Отзывы</a>
-          </main>
+          </div>
           <section class="main__section-content">
             <div class="main__text"
               >Мы являемся авторизованным сервисным центром по ремонту техники
@@ -242,20 +184,24 @@
                   >, что подтверждает большое количество постоянных клиентов. Мы
                   гордимся тем, что к нам обращаются по рекомендациям и, в свою
                   очередь, советуют нас родным и близким.</span
+                ><span class="main__text-span-lorem">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Maiores nobis impedit ipsum incidunt qui error eos! Autem
+                  consectetur tempora sint. Laudantium illum atque velit soluta
+                  minus amet magnam explicabo pariatur.</span
                 ></p
               >
 
-              <button class="main__button-read-more"
-                ><img class="main__img-expand" src="img/expand.png" />Читать
-                далее</button
-              >
+              <button class="main__button-read-more">Читать далее</button>
             </div>
             <img class="main__img-big-pictire" src="img/big_picture.png" />
           </section>
-        </main>
+        </div>
 
         <div class="header-1">
-          <h1 class="header-1__h1-repair">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
+          <div class="header-1__h1-repair"
+            >Ремонт техники различных брендов</div
+          >
         </div>
 
         <!-- Слайдер 1 -->
@@ -336,7 +282,7 @@
         <!-- Слайдер 2 -->
 
         <div class="header-1">
-          <h1 class="header-1__h1-repair">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h1>
+          <div class="header-1__h1-repair">Ремонт различных видов техники</div>
         </div>
 
         <div class="swiper container">
@@ -399,7 +345,7 @@
 
         <!-- Слайдер 3 -->
         <div class="header-1">
-          <h1 class="header-1__h1-repair">ЦЕНЫ НА УСЛУГИ</h1>
+          <div class="header-1__h1-repair">Цены на услуги</div>
         </div>
 
         <div class="swiper container">
@@ -535,6 +481,69 @@
             офертой</div
           >
         </footer>
+      </div>
+    </div>
+
+    <div class="big-container-call">
+      <div class="overlay-call"></div>
+      <div class="call">
+        <button class="call__close-modal"></button>
+        <div class="call__h1"> Заказать звонок </div>
+        <form class="call__form" action="#" method="get">
+          <input
+            class="input-f call__input-tel"
+            type="text"
+            placeholder="Телефон"
+          />
+          <div class="call__info">
+            Нажимая “отправить”, вы даете согласие на
+            <a class="call__personal-data" href="#"
+              >обработку персональных данных</a
+            >
+            и соглашаетесь с нашей
+            <a class="call__privacy-policy">политикой конфиденциальности</a>
+          </div>
+          <button class="call__button-send" type="submit"></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="big-container-feedback">
+      <div class="overlay-feedback"></div>
+      <div class="feedback">
+        <button class="feedback__close-modal"></button>
+        <div class="feedback__h1"> Обратная связь </div>
+        <form class="feedback__form" action="#" method="get">
+          <input
+            class="input-f feedback__input-name"
+            type="text"
+            placeholder="Имя"
+          />
+          <input
+            class="input-f feedback__input-tel"
+            type="text"
+            placeholder="Телефон"
+          />
+          <input
+            class="input-f feedback__input-email"
+            type="text"
+            placeholder="Электронная почта"
+          />
+          <textarea
+            class="input-f feedback__input-message"
+            type="text"
+            placeholder="Сообщение"
+          ></textarea>
+          <div class="feedback__info">
+            Нажимая “отправить”, вы даете согласие на
+            <a class="feedback__personal-data" href="#"
+              >обработку персональных данных</a
+            >
+            и соглашаетесь с нашей
+            <a class="feedback__privacy-policy">политикой конфиденциальности</a>
+          </div>
+          <button class="feedback__button-send" type="submit"></button>
+        </form>
       </div>
     </div>
 

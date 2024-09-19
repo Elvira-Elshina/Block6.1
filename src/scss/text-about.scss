@@ -12,6 +12,13 @@
       height: 20px;
       margin-left: 5px;
     }
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+      transition-property: opacity;
+      transition-duration: 0.2s;
+    }
   }
 }
 
